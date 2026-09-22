@@ -1,0 +1,557 @@
+.club-page-wrapper {
+  width: 100%;
+  background-color: var(--color-primary-dark);
+  color: var(--text-light);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+}
+
+/* 1. HERO BANNER PRINCIPAL */
+.club-hero-banner {
+  position: relative;
+  padding: 6.5rem 2rem 5rem 2rem;
+  background-image: url("https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.club-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.92) 0%,
+    rgba(30, 58, 138, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.club-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.club-badge-hero {
+  display: inline-block;
+  padding: 0.5rem 1.4rem;
+  background-color: var(--color-accent-orange);
+  color: var(--text-light);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow-glow);
+}
+
+.club-hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.18;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+.highlight-orange {
+  color: var(--color-accent-orange);
+}
+.highlight-blue {
+  color: var(--color-brand-hover);
+}
+
+.club-hero-description {
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: var(--text-light);
+  max-width: 780px;
+  margin: 0 auto 2.2rem auto;
+  opacity: 0.88;
+}
+
+.club-hero-actions {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-club-hero-primary {
+  background: var(--gradient-accent);
+  color: var(--text-light);
+  padding: 1rem 2.2rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-club-hero-primary:hover {
+  background: var(--gradient-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.6);
+}
+
+.btn-club-hero-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  color: var(--text-light);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 0.95rem 2.2rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.btn-club-hero-secondary:hover {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  transform: translateY(-3px);
+}
+
+/* 2. BANDA DE CIFRAS DE IMPACTO */
+.club-stats-strip {
+  background-color: var(--color-brand-blue);
+  padding: 2.2rem 1.5rem;
+}
+
+.club-stats-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.club-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-accent-orange);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  opacity: 0.82;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 768px) {
+  .stat-divider {
+    display: none;
+  }
+}
+
+/* 3. SECCIÓN DISCIPLINAS */
+.club-disciplinas-section {
+  padding: 5rem 2rem;
+  background-color: var(--color-primary-dark);
+}
+
+.club-section-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.sub-tag {
+  color: var(--color-accent-orange);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.club-section-header h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.club-section-header p {
+  color: var(--text-light);
+  opacity: 0.72;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.disciplinas-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+}
+
+.disciplina-card {
+  background: var(--bg-card-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.disciplina-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-orange);
+}
+
+.disc-card-header {
+  padding: 2rem 1.5rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.disc-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.disc-category {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.disc-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-light);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.disc-card-body {
+  padding: 1.8rem 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.disc-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 1.2rem;
+}
+
+.disc-subtitle {
+  color: var(--color-accent-orange);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.disc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.disc-list li {
+  color: var(--text-primary);
+  font-size: 0.88rem;
+}
+
+/* 4. SECCIÓN MULTIMEDIA GALERÍA */
+.club-galeria-section {
+  padding: 5rem 2rem;
+  background-color: var(--bg-card-subtle);
+}
+
+.galeria-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--color-primary-dark);
+  border: 1px solid var(--border-strong);
+  color: var(--text-light);
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-accent-orange);
+  color: var(--text-light);
+}
+
+.filter-btn.active {
+  background: var(--color-accent-orange);
+  color: var(--text-light);
+  border-color: var(--color-accent-orange);
+  box-shadow: var(--shadow-glow);
+}
+
+.galeria-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.galeria-card {
+  background: var(--color-primary-dark);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.media-photo-box {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.media-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.media-photo-box:hover img {
+  transform: scale(1.08);
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 1.2rem 1rem 1.2rem;
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.95));
+}
+
+.photo-overlay h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 0.2rem;
+}
+
+.photo-overlay p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+.media-video-box iframe {
+  width: 100%;
+  height: 210px;
+  border: none;
+}
+
+.video-info {
+  padding: 1rem 1.2rem;
+}
+
+.video-info h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 0.3rem;
+}
+
+.video-info p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  opacity: 0.72;
+}
+
+/* 5. PILARES DE ENTRENAMIENTO */
+.club-pilares-section {
+  padding: 5rem 2rem;
+  background-color: var(--color-primary-dark);
+}
+
+.pilares-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.8rem;
+}
+
+.pilar-card {
+  background: var(--bg-card-subtle);
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.pilar-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent-orange);
+}
+
+.pilar-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.pilar-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.pilar-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* 6. LLAMADO A LA ACCIÓN (CTA) */
+.club-cta-section {
+  padding: 5rem 2rem;
+  background: var(--gradient-dark-overlay);
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-container h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.cta-container p {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 2.2rem;
+  opacity: 0.82;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-cta-gold {
+  background: var(--gradient-accent);
+  color: var(--text-light);
+  padding: 1rem 2.2rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-cta-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.6);
+}
+
+.btn-cta-outline {
+  border: 2px solid var(--text-light);
+  color: var(--text-light);
+  padding: 0.95rem 2.2rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.btn-cta-outline:hover {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .club-hero-title {
+    font-size: 2.2rem;
+  }
+  .club-hero-description {
+    font-size: 1rem;
+  }
+  .cta-container h2 {
+    font-size: 1.8rem;
+  }
+}

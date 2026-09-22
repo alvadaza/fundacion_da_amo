@@ -1,0 +1,366 @@
+/* ===============================================================
+   FUNDACIÓN FUNDAMOR (FUNDACIÓN DA AMOR) - SYSTEM DESIGN VARIABLES
+   =============================================================== */
+
+:root {
+  /* --- PALETA DE COLORES PRINCIPALES --- */
+  --color-primary-dark: #17130d; /* Madera oscura / base premium */
+  --color-brand-blue: #f0bf2f; /* Amarillo institucional más vivo */
+  --color-brand-hover: #d9a715; /* Dorado más intenso */
+  --color-accent-orange: #f8d34a; /* Amarillo florecente / foco visual */
+  --color-accent-hover: #f4c414; /* Amarillo más brillante */
+  --color-emerald: #d5b24a; /* Verde oliva dorado / contraste cálido */
+  --color-gold: #f9e27d; /* Amarillo claro para detalle */
+
+  /* --- GRADIENTES DINÁMICOS --- */
+  --gradient-hero: linear-gradient(
+    135deg,
+    var(--color-primary-dark) 0%,
+    var(--color-brand-blue) 48%,
+    #8a6910 100%
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--color-accent-orange) 0%,
+    var(--color-accent-hover) 100%
+  );
+  --gradient-card: linear-gradient(180deg, #fffdf5 0%, #f9f4e6 100%);
+  --gradient-glass: linear-gradient(
+    135deg,
+    rgba(255, 251, 235, 0.94) 0%,
+    rgba(255, 245, 204, 0.8) 100%
+  );
+  --gradient-dark-overlay: linear-gradient(
+    135deg,
+    rgba(23, 19, 13, 0.9) 0%,
+    rgba(240, 191, 47, 0.8) 100%
+  );
+  --gradient-orange-overlay: linear-gradient(
+    135deg,
+    rgba(23, 19, 13, 0.9) 0%,
+    rgba(248, 211, 74, 0.82) 100%
+  );
+  --gradient-emerald-overlay: linear-gradient(
+    135deg,
+    rgba(23, 19, 13, 0.9) 0%,
+    rgba(213, 178, 74, 0.8) 100%
+  );
+
+  /* --- NEUTRALES Y SUPERFICIES --- */
+  --bg-main: #f8f5eb; /* Fondo cálido y limpio */
+  --bg-surface: #fffdf8; /* Tarjetas y contenedores */
+  --bg-card-subtle: #f3ebd6; /* Fondos secundarios suaves */
+  --text-primary: #1f1a13; /* Títulos y texto principal */
+  --text-secondary: #5d4d2d; /* Texto descriptivo cálido */
+  --text-muted: #7a6b4e; /* Información atenuada */
+  --text-light: #fffaf0; /* Texto claro sobre fondos oscuros */
+  --border-subtle: #e9ddae;
+  --border-strong: #d4ba6c;
+
+  /* --- SOMBRAS CON PROFUNDIDAD --- */
+  --shadow-sm: 0 4px 12px rgba(23, 19, 13, 0.05);
+  --shadow-md:
+    0 10px 25px -5px rgba(23, 19, 13, 0.1),
+    0 8px 10px -6px rgba(23, 19, 13, 0.06);
+  --shadow-lg:
+    0 20px 35px -10px rgba(23, 19, 13, 0.14),
+    0 10px 15px -5px rgba(23, 19, 13, 0.08);
+  --shadow-glow: 0 10px 30px rgba(240, 191, 47, 0.38);
+
+  /* --- BORDES Y TRANSICIONES --- */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===============================================================
+   CONTENEDOR PRINCIPAL DEL EFECTO STACK
+   =============================================================== */
+
+.app-stack-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-primary-dark);
+  isolation: isolate;
+}
+
+/* ===============================================================
+   1. HERO / VIDEO
+   =============================================================== */
+
+.hero-viewport {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  z-index: 1;
+
+  /* Evita pequeños saltos de renderizado */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* ===============================================================
+   2. CONTENEDOR DE CADA SECCIÓN
+   =============================================================== */
+
+/*
+   Este espacio es MUY importante.
+
+   Antes tenías 140vh para todas las tarjetas.
+   Eso hacía que el navegador intentara resolver al mismo tiempo:
+
+   - sticky
+   - overflow
+   - altura de la tarjeta
+   - siguiente sección
+
+   Ahora cada sección tiene un recorrido claro.
+*/
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* ===============================================================
+   3. TARJETAS / SECCIONES
+   =============================================================== */
+
+.stack-card {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: var(--bg-surface);
+
+  /*
+     IMPORTANTE:
+     La página debe controlar el scroll principal.
+     No cada tarjeta.
+  */
+  overflow: visible;
+
+  border-radius: 40px 40px 0 0;
+
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.35);
+
+  margin-top: 0;
+
+  /*
+     Evita parpadeos y pequeños movimientos
+     durante el sticky.
+  */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  /*
+     Mantiene el movimiento suave.
+  */
+  will-change: transform;
+}
+
+/* ===============================================================
+   4. CONTENIDO INTERNO
+   =============================================================== */
+
+/*
+   Si alguna sección tiene mucho contenido,
+   NO queremos que cree un segundo scroll
+   dentro de .stack-card.
+
+   El contenido debe crecer normalmente.
+*/
+.stack-card,
+.overlap-section-quienes {
+  overflow: visible;
+}
+.stack-card > * {
+  max-width: 100%;
+}
+
+/* ===============================================================
+   5. ESCALERA DE SECCIONES
+   =============================================================== */
+
+.section-quienes {
+  z-index: 10;
+}
+
+.section-deporte {
+  z-index: 20;
+}
+
+.section-comedores {
+  z-index: 30;
+}
+
+.section-educacion {
+  z-index: 40;
+}
+
+/* ===============================================================
+   6. FOOTER
+   =============================================================== */
+
+.footer-normal-flow {
+  position: relative;
+  z-index: 50;
+
+  width: 100%;
+
+  background-color: var(--color-primary-dark);
+  color: var(--text-light);
+
+  padding: 4rem 2rem 2rem;
+
+  /*
+     Garantiza que el footer quede
+     completamente después de las secciones.
+  */
+  min-height: 300px;
+}
+
+/* ===============================================================
+   7. OPTIMIZACIÓN DEL SCROLL
+   =============================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+
+  overflow-x: hidden;
+
+  /*
+     Evita que el navegador cree comportamientos
+     extraños de desplazamiento horizontal.
+  */
+  overscroll-behavior-x: none;
+}
+
+/* ===============================================================
+   8. REDUCIR MOVIMIENTOS CUANDO EL USUARIO LO SOLICITA
+   =============================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* ===============================================================
+   9. TABLETS
+   =============================================================== */
+
+@media (max-width: 1024px) {
+  .hero-viewport {
+    min-height: 550px;
+  }
+
+  .card-wrapper {
+    min-height: 115vh;
+  }
+
+  .stack-card {
+    min-height: 100vh;
+    border-radius: 32px 32px 0 0;
+  }
+}
+
+/* ===============================================================
+   10. MÓVILES
+   =============================================================== */
+
+@media (max-width: 768px) {
+  .hero-viewport {
+    height: 100svh;
+    min-height: 500px;
+  }
+
+  .card-wrapper {
+    /*
+       En celular reducimos el recorrido.
+       120vh puede sentirse demasiado largo
+       dependiendo del navegador.
+    */
+    min-height: 108svh;
+  }
+
+  .stack-card {
+    min-height: 100svh;
+
+    border-radius: 24px 24px 0 0;
+
+    /*
+       Nada de scroll interno.
+    */
+    overflow: visible;
+  }
+
+  .footer-normal-flow {
+    padding: 3rem 1.25rem 2rem;
+  }
+}
+
+/* ===============================================================
+   11. PANTALLAS MUY PEQUEÑAS
+   =============================================================== */
+
+@media (max-width: 480px) {
+  .hero-viewport {
+    min-height: 480px;
+  }
+
+  .card-wrapper {
+    min-height: 105svh;
+  }
+
+  .stack-card {
+    min-height: 100svh;
+    border-radius: 20px 20px 0 0;
+  }
+}

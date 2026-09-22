@@ -1,0 +1,574 @@
+/* ===============================================================
+   QUIÉNES SOMOS - VERSIÓN COMPACTA
+   =============================================================== */
+
+.overlap-section-quienes {
+  position: relative;
+  z-index: 10;
+  background-color: #ffffff;
+
+  border-radius: 32px 32px 0 0;
+  margin-top: -30px;
+
+  /* Antes: 4.5rem 2rem 5rem */
+  padding: 2.5rem 1.5rem 3rem;
+
+  box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.25);
+
+  height: auto;
+  min-height: auto;
+
+  overflow: visible;
+}
+
+/* ===============================================================
+   INDICADOR SUPERIOR
+   =============================================================== */
+
+.section-handle {
+  width: 45px;
+  height: 4px;
+
+  background-color: #cbd5e1;
+  border-radius: 10px;
+
+  margin: 0 auto 1.5rem;
+}
+
+/* ===============================================================
+   CONTENEDOR
+   =============================================================== */
+
+.quienes-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===============================================================
+   ENCABEZADO
+   =============================================================== */
+
+.quienes-header {
+  text-align: center;
+  max-width: 700px;
+
+  margin: 0 auto 1.8rem;
+}
+
+.quienes-badge {
+  display: inline-block;
+
+  padding: 0.3rem 0.9rem;
+
+  background-color: rgba(30, 58, 138, 0.08);
+  color: #1e3a8a;
+
+  font-weight: 700;
+  font-size: 0.72rem;
+
+  border-radius: 50px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+
+  margin-bottom: 0.6rem;
+}
+
+.quienes-title {
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  color: #0f172a;
+
+  line-height: 1.15;
+
+  margin-bottom: 0.7rem;
+
+  letter-spacing: -0.4px;
+}
+
+.quienes-description {
+  font-size: 0.95rem;
+
+  color: #64748b;
+
+  line-height: 1.5;
+
+  margin: 0 auto;
+}
+
+/* ===============================================================
+   TABS
+   =============================================================== */
+
+.quienes-tabs-bar {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  margin-bottom: 1.5rem;
+
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: #f1f5f9;
+
+  border: 1px solid #e2e8f0;
+
+  padding: 0.55rem 1.1rem;
+
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  font-size: 0.85rem;
+
+  color: #475569;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.tab-btn.active {
+  background: #1e3a8a;
+
+  color: #ffffff;
+
+  border-color: #1e3a8a;
+
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+}
+
+/* ===============================================================
+   CONTENIDO DE LAS PESTAÑAS
+   =============================================================== */
+
+.quienes-tab-content {
+  background: #f8fafc;
+
+  border-radius: 18px;
+
+  padding: 1.5rem;
+
+  border: 1px solid #e2e8f0;
+}
+
+/* ===============================================================
+   ANIMACIÓN
+   =============================================================== */
+
+.animate-fade {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================================================
+   MISIÓN / VISIÓN
+   =============================================================== */
+
+.grid-2-col {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 1.2rem;
+}
+
+.card-mision {
+  background: #ffffff;
+
+  padding: 1.5rem;
+
+  border-radius: 16px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+
+  border-top: 4px solid #1e3a8a;
+}
+
+.card-mision.highlight-accent {
+  border-top-color: #f97316;
+}
+
+.icon-wrapper {
+  font-size: 1.8rem;
+
+  margin-bottom: 0.6rem;
+}
+
+.card-mision h3 {
+  font-size: 1.2rem;
+
+  color: #0f172a;
+
+  margin-bottom: 0.5rem;
+
+  font-weight: 700;
+}
+
+.card-mision p {
+  color: #64748b;
+
+  line-height: 1.5;
+
+  font-size: 0.9rem;
+
+  margin: 0;
+}
+
+/* ===============================================================
+   GRID FEATURE
+   =============================================================== */
+
+.grid-feature {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 1.5rem;
+
+  align-items: center;
+}
+
+.feature-tag {
+  color: #f97316;
+
+  font-weight: 700;
+
+  font-size: 0.75rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.feature-text h3 {
+  font-size: 1.5rem;
+
+  color: #0f172a;
+
+  margin: 0.3rem 0 0.7rem;
+
+  font-weight: 800;
+}
+
+.feature-text p {
+  color: #64748b;
+
+  line-height: 1.5;
+
+  margin-bottom: 1rem;
+
+  font-size: 0.9rem;
+}
+
+/* ===============================================================
+   LISTA
+   =============================================================== */
+
+.check-list {
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.4rem;
+}
+
+.check-list li {
+  position: relative;
+
+  padding-left: 1.5rem;
+
+  color: #334155;
+
+  font-weight: 500;
+
+  font-size: 0.88rem;
+}
+
+.check-list li::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+
+  color: #10b981;
+
+  font-weight: 800;
+}
+
+/* ===============================================================
+   TARJETAS DESTACADAS
+   =============================================================== */
+
+.feature-card-accent {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+
+  color: #ffffff;
+
+  padding: 1.8rem;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 18px rgba(30, 58, 138, 0.18);
+}
+
+.feature-card-orange {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+
+  color: #ffffff;
+
+  padding: 1.8rem;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 18px rgba(249, 115, 22, 0.2);
+}
+
+.big-stat {
+  font-size: 2.3rem;
+
+  font-weight: 800;
+
+  margin-bottom: 0.3rem;
+}
+
+.feature-card-accent p,
+.feature-card-orange p {
+  font-size: 0.85rem;
+
+  opacity: 0.9;
+
+  margin: 0;
+}
+
+/* ===============================================================
+   VALORES
+   =============================================================== */
+
+.values-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: 1rem;
+}
+
+.value-box {
+  background: #ffffff;
+
+  padding: 1.3rem;
+
+  border-radius: 14px;
+
+  border: 1px solid #e2e8f0;
+
+  text-align: center;
+
+  transition: transform 0.25s ease;
+}
+
+.value-box:hover {
+  transform: translateY(-3px);
+
+  border-color: #f97316;
+}
+
+.val-icon {
+  font-size: 1.8rem;
+
+  display: block;
+
+  margin-bottom: 0.5rem;
+}
+
+.value-box h4 {
+  color: #0f172a;
+
+  font-size: 1rem;
+
+  margin-bottom: 0.3rem;
+
+  font-weight: 700;
+}
+
+.value-box p {
+  color: #64748b;
+
+  font-size: 0.82rem;
+
+  line-height: 1.4;
+
+  margin: 0;
+}
+
+/* ===============================================================
+   TABLET
+   =============================================================== */
+
+@media (max-width: 850px) {
+  .grid-feature {
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+  }
+}
+
+/* ===============================================================
+   MÓVIL
+   =============================================================== */
+
+@media (max-width: 768px) {
+  .overlap-section-quienes {
+    border-radius: 24px 24px 0 0;
+
+    margin-top: -20px;
+
+    padding: 2rem 1rem 2.5rem;
+  }
+
+  .section-handle {
+    width: 40px;
+
+    margin-bottom: 1.2rem;
+  }
+
+  .quienes-header {
+    margin-bottom: 1.3rem;
+  }
+
+  .quienes-title {
+    font-size: 1.65rem;
+  }
+
+  .quienes-description {
+    font-size: 0.88rem;
+  }
+
+  .quienes-tabs-bar {
+    gap: 0.4rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 0.85rem;
+
+    font-size: 0.78rem;
+  }
+
+  .quienes-tab-content {
+    padding: 1rem;
+
+    border-radius: 14px;
+  }
+
+  .grid-2-col {
+    grid-template-columns: 1fr;
+
+    gap: 0.8rem;
+  }
+
+  .card-mision {
+    padding: 1.2rem;
+  }
+
+  .card-mision h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-mision p {
+    font-size: 0.85rem;
+  }
+
+  .grid-feature {
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+  }
+
+  .feature-card-accent,
+  .feature-card-orange {
+    padding: 1.5rem;
+  }
+
+  .big-stat {
+    font-size: 2rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 0.7rem;
+  }
+
+  .value-box {
+    padding: 1rem;
+  }
+
+  .val-icon {
+    font-size: 1.6rem;
+  }
+
+  .value-box h4 {
+    font-size: 0.9rem;
+  }
+
+  .value-box p {
+    font-size: 0.76rem;
+  }
+}
+
+/* ===============================================================
+   MÓVILES PEQUEÑOS
+   =============================================================== */
+
+@media (max-width: 480px) {
+  .overlap-section-quienes {
+    padding: 1.7rem 0.8rem 2rem;
+  }
+
+  .quienes-title {
+    font-size: 1.5rem;
+  }
+
+  .quienes-tab-content {
+    padding: 0.8rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-text h3 {
+    font-size: 1.3rem;
+  }
+}
