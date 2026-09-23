@@ -184,21 +184,21 @@ export default function Navbar({ currentPage, setCurrentPage }) {
               </li>
 
               <li>
-                <a
-                  href="/contacto"
+                <Link
+                  to="/contacto"
                   className="nav-link"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contacto
-                </a>
+                </Link>
               </li>
             </ul>
 
             {/* BOTÓN DE DONACIÓN DE ALTO IMPACTO */}
             <div className="navbar-actions">
-              <a href="/donaciones" className="btn-donate-glow">
+              <Link to="/donaciones" className="btn-donate-glow">
                 Hacer una Donación
-              </a>
+              </Link>
             </div>
           </div>
         </div>

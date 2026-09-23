@@ -27,7 +27,7 @@ export default function ComedoresPage() {
       title: "Un Día en Nuestro Comedor Comunitario",
       description:
         "Conoce el recorrido diario desde la preparación a las 5:00 AM hasta la sonrisa de cada niño al recibir su plato.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Reemplazar con URL o tag de video propio
+      videoUrl: "fundamor.mp4", // Reemplazar con URL o tag de video propio
       posterUrl: "videodocumental.avif",
       badge: "Video Documental",
     },
