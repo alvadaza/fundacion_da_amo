@@ -58,9 +58,9 @@ export default function Navbar({ currentPage, setCurrentPage }) {
           <div className="top-info">
             <span>📍 Colombia</span>
             <span className="separator">•</span>
-            <span>📞 +57 (300) 123-4567</span>
+            <span>📞 +57 (311) 4535541</span>
             <span className="separator">•</span>
-            <span>✉️ contacto@fundaciondaamor.org</span>
+            <span>✉️ fundaciondaamor2024@gmail.com</span>
           </div>
           <div className="top-badge-esal">
             Entidad Sin Ánimo de Lucro (ESAL)
@@ -124,6 +124,15 @@ export default function Navbar({ currentPage, setCurrentPage }) {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Misión & Visión
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/programas"
+                  className="nav-link"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Programas
                 </Link>
               </li>
 

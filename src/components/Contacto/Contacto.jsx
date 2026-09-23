@@ -43,7 +43,7 @@ export default function Contacto() {
               <span className="info-card-icon">✉️</span>
               <div>
                 <strong>Correo Electrónico</strong>
-                <p>contacto@fundaciondaamor.org</p>
+                <p>fundaciondaamor2024@gmail.com</p>
               </div>
             </div>
 
@@ -51,7 +51,7 @@ export default function Contacto() {
               <span className="info-card-icon">📞</span>
               <div>
                 <strong>Línea Directa / WhatsApp</strong>
-                <p>+57 (300) 123-4567</p>
+                <p>+57 3114535541</p>
               </div>
             </div>
 

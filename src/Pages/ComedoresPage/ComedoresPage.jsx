@@ -17,8 +17,7 @@ export default function ComedoresPage() {
       title: "Alimentación Balanceada Diario",
       description:
         "Menús supervisados por nutricionistas para garantizar proteína, verdura y carbohidratos adecuados.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "nuticion.avif",
       badge: "Nutrición",
     },
     {
@@ -29,8 +28,7 @@ export default function ComedoresPage() {
       description:
         "Conoce el recorrido diario desde la preparación a las 5:00 AM hasta la sonrisa de cada niño al recibir su plato.",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Reemplazar con URL o tag de video propio
-      posterUrl:
-        "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80",
+      posterUrl: "videodocumental.avif",
       badge: "Video Documental",
     },
     {
@@ -40,8 +38,7 @@ export default function ComedoresPage() {
       title: "Integración y Convivencia Familiar",
       description:
         "Espacios seguros donde madres comunitarias, niños y adultos mayores comparten en un ambiente lleno de amor.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "comunidad.avif",
       badge: "Comunidad",
     },
     {
@@ -51,8 +48,7 @@ export default function ComedoresPage() {
       title: "Jornadas de Entrega y Talleres",
       description:
         "Complementamos la ración de comida con talleres de higiene oral y hábitos saludables para la primera infancia.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "salud y igiene.avif",
       badge: "Salud & Higiene",
     },
   ];
@@ -84,7 +80,7 @@ export default function ComedoresPage() {
             familias en situación de vulnerabilidad.
           </p>
           <div className="comedores-hero-actions">
-            <a href="#donar-menu" className="btn-comedores-hero-primary">
+            <a href="/donaciones" className="btn-comedores-hero-primary">
               ❤️ Donar un Menú o Insumos
             </a>
             <a
@@ -267,7 +263,7 @@ export default function ComedoresPage() {
                 diariamente.
               </p>
               <div className="cta-buttons">
-                <a href="#donar" className="btn-cta-accent">
+                <a href="/donaciones" className="btn-cta-accent">
                   ❤️ Donar para Menús Nutritivos
                 </a>
                 <a href="#contacto" className="btn-cta-outline">

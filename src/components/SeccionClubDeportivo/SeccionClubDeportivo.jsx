@@ -20,7 +20,7 @@ export default function SeccionClubDeportivo() {
             riesgos sociales mediante el deporte recreativo y formativo.
           </p>
           <div className="club-actions">
-            <a href="#deporte" className="btn-club-primary">
+            <a href="/club-deportivo" className="btn-club-primary">
               Conoce nuestro Club Deportivo ➔
             </a>
           </div>

@@ -45,6 +45,12 @@ export default function QuienesSomos() {
             🍲 Comedores Comunitarios
           </button>
           <button
+            className={`tab-btn ${activeTab === "educacion" ? "active" : ""}`}
+            onClick={() => setActiveTab("educacion")}
+          >
+            💻 Educación
+          </button>
+          <button
             className={`tab-btn ${activeTab === "valores" ? "active" : ""}`}
             onClick={() => setActiveTab("valores")}
           >
@@ -130,6 +136,45 @@ export default function QuienesSomos() {
                 <div className="feature-card-orange">
                   <div className="big-stat">🍲 +50k</div>
                   <p>Raciones de comida entregadas con dignidad y amor.</p>
+                </div>
+              </div>
+            </div>
+          )}
+          {activeTab === "educacion" && (
+            <div className="tab-pane animate-fade">
+              <div className="grid-feature">
+                <div className="feature-text">
+                  <span className="feature-tag">Educación & Tecnología</span>
+
+                  <h3>ABC Digital STEAM</h3>
+
+                  <p>
+                    Impulsamos el acceso a la educación y la transformación
+                    digital mediante programas de formación que fortalecen las
+                    competencias tecnológicas, académicas y creativas de niños,
+                    jóvenes y comunidades.
+                  </p>
+
+                  <ul className="check-list">
+                    <li>Formación en competencias digitales y tecnológicas.</li>
+                    <li>
+                      Programas educativos basados en Ciencia, Tecnología,
+                      Ingeniería, Arte y Matemáticas.
+                    </li>
+                    <li>
+                      Desarrollo de habilidades para el aprendizaje y nuevas
+                      oportunidades.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="feature-card-orange">
+                  <div className="big-stat">💻 STEAM</div>
+
+                  <p>
+                    Educación, tecnología e innovación para construir
+                    oportunidades y transformar el futuro.
+                  </p>
                 </div>
               </div>
             </div>

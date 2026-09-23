@@ -39,11 +39,11 @@ export default function Hero() {
           </p>{" "}
           <div className="hero-action-group">
             {" "}
-            <a href="#donar" className="btn-hero-primary">
+            <a href="/donaciones" className="btn-hero-primary">
               {" "}
               ❤️ Donar o Apoyar{" "}
             </a>{" "}
-            <a href="#servicios" className="btn-hero-secondary">
+            <a href="/programas" className="btn-hero-secondary">
               {" "}
               ⚽ Explorar Programas{" "}
             </a>{" "}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ClubDeportivo.css";
+import Footer from "../../components/Footer/Footer";
 
 export default function ClubDeportivoPage() {
   const [activeFilter, setActiveFilter] = useState("todos");
@@ -19,8 +20,7 @@ export default function ClubDeportivoPage() {
         "Acompañamiento psicológico y valores",
       ],
       badgeColor: "#1e3a8a",
-      bgImage:
-        "https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80",
+      bgImage: "fotbol.avif",
     },
     {
       id: "futsal",
@@ -36,8 +36,7 @@ export default function ClubDeportivoPage() {
         "Desarrollo de reflejos y estrategia",
       ],
       badgeColor: "#2563eb",
-      bgImage:
-        "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80",
+      bgImage: "football-2182996_1920.jpg",
     },
     {
       id: "taekwondo",
@@ -53,8 +52,7 @@ export default function ClubDeportivoPage() {
         "Formación del carácter y el respeto",
       ],
       badgeColor: "#dc2626",
-      bgImage:
-        "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=800&q=80",
+      bgImage: "Taekwondo.avif",
     },
     {
       id: "patinaje",
@@ -70,8 +68,7 @@ export default function ClubDeportivoPage() {
         "Festivales de patinaje infantil",
       ],
       badgeColor: "#f97316",
-      bgImage:
-        "https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?auto=format&fit=crop&w=800&q=80",
+      bgImage: "patinaje.avif",
     },
   ];
 
@@ -82,7 +79,7 @@ export default function ClubDeportivoPage() {
       categoria: "futbol",
       titulo: "Torneo de Fútbol Infantil Fundamor",
       subtitulo: "Jornada de integración y juego limpio",
-      url: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80",
+      url: "public/torneoinfantil.jpeg",
     },
     {
       id: 2,
@@ -151,7 +148,7 @@ export default function ClubDeportivoPage() {
             jóvenes y familias en entornos de vulnerabilidad social.
           </p>
           <div className="club-hero-actions">
-            <a href="#contacto" className="btn-club-hero-primary">
+            <a href="/contacto" className="btn-club-hero-primary">
               🏆 Becar a un Deportista
             </a>
             <a href="#disciplinas" className="btn-club-hero-secondary">
@@ -165,22 +162,42 @@ export default function ClubDeportivoPage() {
       <section className="club-stats-strip">
         <div className="club-stats-container">
           <div className="club-stat-box">
-            <span className="stat-number">+800</span>
+            <span
+              className="stat-number"
+              style={{ color: "var(--text-primary, #0f172a)" }}
+            >
+              +800
+            </span>
             <span className="stat-label">Jóvenes Becados</span>
           </div>
           <div className="stat-divider"></div>
           <div className="club-stat-box">
-            <span className="stat-number">4</span>
+            <span
+              className="stat-number"
+              style={{ color: "var(--text-primary, #0f172a)" }}
+            >
+              4
+            </span>
             <span className="stat-label">Disciplinas Activas</span>
           </div>
           <div className="stat-divider"></div>
           <div className="club-stat-box">
-            <span className="stat-number">100%</span>
+            <span
+              className="stat-number"
+              style={{ color: "var(--text-primary, #0f172a)" }}
+            >
+              100%
+            </span>
             <span className="stat-label">Formación en Valores</span>
           </div>
           <div className="stat-divider"></div>
           <div className="club-stat-box">
-            <span className="stat-number">15+</span>
+            <span
+              className="stat-number"
+              style={{ color: "var(--text-primary, #0f172a)" }}
+            >
+              15+
+            </span>
             <span className="stat-label">Torneos y Exhibiciones</span>
           </div>
         </div>
@@ -234,8 +251,10 @@ export default function ClubDeportivoPage() {
       <section className="club-galeria-section">
         <div className="club-section-header">
           <span className="sub-tag">Galería de Impacto</span>
-          <h2>Fotos, Videos y Testimonios en Acción</h2>
-          <p>
+          <h2 style={{ color: "var(--text-primary, #0f172a)" }}>
+            Fotos, Videos y Testimonios en Acción
+          </h2>
+          <p style={{ color: "var(--text-primary, #0f172a)" }}>
             Conoce de cerca la vivencia de nuestros jóvenes deportistas en
             entrenamientos, torneos y exhibiciones marciales.
           </p>
@@ -366,15 +385,16 @@ export default function ClubDeportivoPage() {
             Patinaje.
           </p>
           <div className="cta-buttons">
-            <a href="#contacto" className="btn-cta-gold">
+            <a href="/contacto" className="btn-cta-gold">
               🏆 Becar a un Deportista
             </a>
-            <a href="#contacto" className="btn-cta-outline">
+            <a href="/contacto" className="btn-cta-outline">
               📝 Inscripciones y Requisitos
             </a>
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

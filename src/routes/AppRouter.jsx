@@ -14,6 +14,7 @@ import ClubDeportivo from "../Pages/ClubDeportivo/ClubDeportivo";
 import Educacion from "../Pages/Educacion/Educacion";
 import ContactoPage from "../Pages/ContactoPage/ContactoPage";
 import DonacionesPage from "../Pages/Donaciones/Donaciones";
+import Programas from "../components/Programas/Programas";
 
 import "../styles/variables.css";
 
@@ -58,6 +59,7 @@ export default function AppRouter() {
           <Route path="/educacion" element={<Educacion />} />
           <Route path="/contacto" element={<ContactoPage />} />
           <Route path="/donaciones" element={<DonacionesPage />} />
+          <Route path="/programas" element={<Programas />} />
         </Routes>
       </div>
     </BrowserRouter>

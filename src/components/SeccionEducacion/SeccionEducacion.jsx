@@ -46,7 +46,7 @@ export default function SeccionEducacion() {
             </div>
           </div>
           <div className="educacion-actions">
-            <a href="#contacto" className="btn-educacion-primary">
+            <a href="/contacto" className="btn-educacion-primary">
               Unirme a los Talleres ➔
             </a>
           </div>

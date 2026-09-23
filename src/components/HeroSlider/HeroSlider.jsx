@@ -12,9 +12,9 @@ export default function HeroSlider() {
       vocation:
         "Transformando vidas y construyendo futuro a través del deporte, la disciplina y la formación integral de nuestros niños y jóvenes.",
       btnPrimaryText: "Unirme como Voluntario",
-      btnPrimaryLink: "#voluntariado",
+      btnPrimaryLink: "/contacto",
       btnSecondaryText: "Club Deportivo",
-      btnSecondaryLink: "#deporte",
+      btnSecondaryLink: "/club-deportivo",
       bgImage: "fundamor.jpg",
     },
     {
@@ -24,10 +24,22 @@ export default function HeroSlider() {
       vocation:
         "Garantizando seguridad alimentaria, bienestar y un plato lleno de amor para cientos de familias y niños en situación de vulnerabilidad.",
       btnPrimaryText: "Cómo Donar",
-      btnPrimaryLink: "#donar",
+      btnPrimaryLink: "/donaciones",
       btnSecondaryText: "Ver Comedores",
-      btnSecondaryLink: "#comedores",
+      btnSecondaryLink: "/comedores",
       bgImage: "comedoes.jpg",
+    },
+    {
+      id: 3,
+      badge: "Educación y Oportunidades",
+      title: "Educación para Todos",
+      vocation:
+        "Impulsando el acceso a la educación, la formación y las oportunidades de aprendizaje para niños, jóvenes y comunidades.",
+      btnPrimaryText: "Conoce Nuestro Proyecto",
+      btnPrimaryLink: "/educacion",
+      btnSecondaryText: "Ver Programas",
+      btnSecondaryLink: "/educacion",
+      bgImage: "educacion.jpg",
     },
   ];
 

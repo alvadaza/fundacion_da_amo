@@ -92,7 +92,7 @@ export default function ContactoPage() {
               <div className="info-card-icon">✉️</div>
               <h3>Correo Electrónico</h3>
               <p>Respuesta en menos de 24 horas</p>
-              <strong>contacto@fundaciondaamor.org</strong>
+              <strong>fundaciondaamor2024@gmail.com</strong>
             </div>
 
             <div className="info-card">
@@ -268,7 +268,7 @@ export default function ContactoPage() {
               <div className="map-frame-wrapper">
                 <iframe
                   title="Mapa Fundación Fundamor"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.392806306!2d-74.2478938!3d4.6482837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a0f0238...!2sBogota%2C%20Colombia!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1988.5389040567259!2d-74.09397686158316!3d4.580049272495285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f98e44c432b61%3A0xfd404aaa01c06428!2sCl.%2015%20Sur%20%2310-44%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1790197855288!5m2!1ses!2sco"
                   width="100%"
                   height="300"
                   style={{ border: 0, borderRadius: "16px" }}
@@ -354,12 +354,12 @@ export default function ContactoPage() {
                 ❤️ Donar Ahora
               </a>
               <a
-                href="https://abcdigitasteam.com.co"
+                href="https://abcdigitalsteam.com.co"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cta-outline"
               >
-                💻 Conocer Filial ABCDIGITASTEAM
+                💻 Conocer Filial ABCDIGITALSTEAM
               </a>
             </div>
           </div>

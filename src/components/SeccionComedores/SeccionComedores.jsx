@@ -20,7 +20,7 @@ export default function SeccionComedores() {
             apoyo mutuo entre los miembros de la comunidad.
           </p>
           <div className="comedores-actions">
-            <a href="#comedores" className="btn-comedores-primary">
+            <a href="/comedores" className="btn-comedores-primary">
               Conoce nuestros Comedores ➔
             </a>
           </div>

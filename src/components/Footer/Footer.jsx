@@ -26,16 +26,16 @@ export default function Footer() {
           <h4>Programas Sociales</h4>
           <ul>
             <li>
-              <a href="#club-deportivo">⚽ Club Deportivo Fundamor</a>
+              <a href="/club-deportivo">⚽ Club Deportivo Fundamor</a>
             </li>
             <li>
-              <a href="#comedores">🍲 Comedores Comunitarios</a>
+              <a href="/comedores">🍲 Comedores Comunitarios</a>
             </li>
             <li>
-              <a href="#futuros-programas">🚀 Proyectos Futuros</a>
+              <a href="/educacion">🚀 Educación</a>
             </li>
             <li>
-              <a href="#donar">❤️ Red de Donantes</a>
+              <a href="/donaciones">❤️ Red de Donantes</a>
             </li>
           </ul>
         </div>
@@ -51,10 +51,10 @@ export default function Footer() {
               <a href="#quienes-somos">Quiénes Somos</a>
             </li>
             <li>
-              <a href="#mision">Misión & Visión</a>
+              <a href="/mision-vision">Misión & Visión</a>
             </li>
             <li>
-              <a href="#contacto">Contacto & Voluntariado</a>
+              <a href="/contacto">Contacto & Voluntariado</a>
             </li>
           </ul>
         </div>
@@ -72,7 +72,7 @@ export default function Footer() {
               Contáctanos para transferencias directas, donación de alimentos o
               indumentaria deportiva.
             </p>
-            <a href="#contacto" className="btn-footer-cta">
+            <a href="/contacto" className="btn-footer-cta">
               Donar / Sumarme
             </a>
           </div>
