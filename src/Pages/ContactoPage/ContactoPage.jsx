@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./ContactoPage.css";
 
 export default function ContactoPage() {
@@ -12,6 +13,8 @@ export default function ContactoPage() {
   });
 
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [faqOpen, setFaqOpen] = useState(null);
 
   const handleChange = (e) => {
@@ -22,13 +25,56 @@ export default function ContactoPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.aceptaPoliticas) {
       alert("Por favor acepta las políticas de tratamiento de datos.");
       return;
     }
-    setFormSubmitted(true);
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const contactEmail =
+      import.meta.env.VITE_CONTACT_EMAIL || "alvarodaza48@gmail.com";
+
+    if (!serviceId || !templateId || !publicKey) {
+      setSubmitError(
+        "El formulario no está configurado todavía. Contacta al administrador.",
+      );
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.nombre,
+          from_email: formData.email,
+          reply_to: formData.email,
+          phone: formData.telefono,
+          subject: formData.asunto,
+          message: formData.mensaje,
+          acepta_politicas: formData.aceptaPoliticas ? "Sí" : "No",
+          to_email: contactEmail,
+          recipient: contactEmail,
+          email: contactEmail,
+        },
+        publicKey,
+      );
+      setFormSubmitted(true);
+    } catch (error) {
+      console.error("Error al enviar el formulario con EmailJS:", error);
+      setSubmitError(
+        `No pudimos enviar tu mensaje (${error?.status || "sin código"}). ${error?.text || "Revisa la configuración de EmailJS e inténtalo nuevamente."}`,
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const toggleFaq = (index) => {
@@ -247,8 +293,18 @@ export default function ContactoPage() {
                     </label>
                   </div>
 
-                  <button type="submit" className="btn-submit-contacto">
-                    Enviar Mensaje ➔
+                  {submitError && (
+                    <p className="form-submit-error" role="alert">
+                      {submitError}
+                    </p>
+                  )}
+
+                  <button
+                    type="submit"
+                    className="btn-submit-contacto"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Enviando mensaje..." : "Enviar Mensaje ➔"}
                   </button>
                 </form>
               )}
@@ -350,7 +406,7 @@ export default function ContactoPage() {
               proyectos de inclusión digital. Tu aporte transforma vidas reales.
             </p>
             <div className="cta-buttons">
-              <a href="#donar" className="btn-cta-orange">
+              <a href="/donaciones" className="btn-cta-orange">
                 ❤️ Donar Ahora
               </a>
               <a
