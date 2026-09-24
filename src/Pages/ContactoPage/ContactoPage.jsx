@@ -36,7 +36,7 @@ export default function ContactoPage() {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     const contactEmail =
-      import.meta.env.VITE_CONTACT_EMAIL || "alvarodaza48@gmail.com";
+      import.meta.env.VITE_CONTACT_EMAIL || "ingenieroalvarod@gmail.com";
 
     if (!serviceId || !templateId || !publicKey) {
       setSubmitError(

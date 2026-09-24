@@ -20,7 +20,7 @@ export default function ClubDeportivoPage() {
         "Acompañamiento psicológico y valores",
       ],
       badgeColor: "#1e3a8a",
-      bgImage: "fotbol.avif",
+      bgImage: "fotbol.webp",
     },
     {
       id: "futsal",
@@ -52,7 +52,7 @@ export default function ClubDeportivoPage() {
         "Formación del carácter y el respeto",
       ],
       badgeColor: "#dc2626",
-      bgImage: "Taekwondo.avif",
+      bgImage: "Taekwondo.webp",
     },
     {
       id: "patinaje",
@@ -68,7 +68,7 @@ export default function ClubDeportivoPage() {
         "Festivales de patinaje infantil",
       ],
       badgeColor: "#f97316",
-      bgImage: "patinaje.avif",
+      bgImage: "patinaje.webp",
     },
   ];
 
@@ -79,7 +79,7 @@ export default function ClubDeportivoPage() {
       categoria: "futbol",
       titulo: "Torneo de Fútbol Infantil Fundamor",
       subtitulo: "Jornada de integración y juego limpio",
-      url: "public/torneoinfantil.jpeg",
+      url: "torneoinfantil.jpeg",
     },
     {
       id: 2,
@@ -95,7 +95,7 @@ export default function ClubDeportivoPage() {
       categoria: "futsal",
       titulo: "Final del Torneo Comunitario de Futsal",
       subtitulo: "Emoción y trabajo en equipo en cancha cubierta",
-      url: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80",
+      url: "fotbol.webp",
     },
     {
       id: 4,
@@ -103,7 +103,7 @@ export default function ClubDeportivoPage() {
       categoria: "patinaje",
       titulo: "Festival de Patinaje sobre Ruedas",
       subtitulo: "Niños y niñas demostrando destreza y equilibrio",
-      url: "https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?auto=format&fit=crop&w=800&q=80",
+      url: "patinaje.webp",
     },
     {
       id: 5,

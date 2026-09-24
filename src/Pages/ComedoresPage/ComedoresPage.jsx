@@ -17,8 +17,8 @@ export default function ComedoresPage() {
       title: "Alimentación Balanceada Diario",
       description:
         "Menús supervisados por nutricionistas para garantizar proteína, verdura y carbohidratos adecuados.",
-      imageUrl: "nuticion.avif",
-      badge: "Nutrición",
+      imageUrl: "nuticion.webp",
+      badge: "nuticion.webp",
     },
     {
       id: 2,
@@ -38,8 +38,8 @@ export default function ComedoresPage() {
       title: "Integración y Convivencia Familiar",
       description:
         "Espacios seguros donde madres comunitarias, niños y adultos mayores comparten en un ambiente lleno de amor.",
-      imageUrl: "comunidad.avif",
-      badge: "Comunidad",
+      imageUrl: "comunidad.webp",
+      badge: "comunidad.webp",
     },
     {
       id: 4,
@@ -48,8 +48,8 @@ export default function ComedoresPage() {
       title: "Jornadas de Entrega y Talleres",
       description:
         "Complementamos la ración de comida con talleres de higiene oral y hábitos saludables para la primera infancia.",
-      imageUrl: "salud y igiene.avif",
-      badge: "Salud & Higiene",
+      imageUrl: "salud y igiene.webp",
+      badge: "salud y igiene.webp",
     },
   ];
 
